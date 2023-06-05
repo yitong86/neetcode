@@ -21,3 +21,19 @@ public class ValidParentheses {
         }
    // }
 }
+//if(s.length() % 2 !=0) return false;
+//stack<Character> stack = new Stack;
+//for(Char c :a.toCharArray()){
+//    if(c == "(" || c =="{" || c=="["){
+//        stack.push(c);
+//        }else if (c ==")" && !stack.isEmpty()&& stack.peek()=="("){
+//        stack.pop();
+//        }else if (c =="}" && !stack.isEmpty()&& stack.peek()=="{"){
+//            stack.pop();
+//        }else if (c =="]" && !stack.isEmpty()&& stack.peek()=="["){
+//            stack.pop();
+//        }
+//        }
+//return stack.isEmpty();
+//        }
+//        }
