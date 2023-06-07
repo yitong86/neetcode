@@ -10,13 +10,19 @@ public class FindMinimumInRotatedSortedArray {
             int left = 0;
             int right = nums.length-1;
 
-            while(left <right){
+            while(left < right){
                 int midpoint = left + (right -left)/2;
-                if(midpoint >0 && nums[midpoint] <nums[midpoint -1]){
+                if(midpoint > 0 && nums[midpoint] < nums[midpoint -1]){
+                    //[9,8,0,2,3]
+                    //0<8
                     return nums[midpoint];
                 }else if(nums[left] <= nums[midpoint] && nums[midpoint]> nums[right]){
+                    //search right
+                    //3<5
+                    //[3,4,5,1,2]
                     left = midpoint +1;
                 }else{
+                    //serach left
                     right = midpoint -1;
                 }
             }
