@@ -6,10 +6,13 @@ import java.util.Map;
 public class TwoSum {
     //class Solution {
         public int[] twoSum(int[] nums, int target) {
+            //value :index .key :number
             Map<Integer,Integer> complements = new HashMap<>();
-            //nums=[2,7,11,15]
+            //nums=[2,7,11,15] target = 9
+            //hashmap is empty
             for (int i = 0;i< nums.length;i++){
                 int complement = target - nums[i];//9-2 =7= complement
+                //find the result
                 if(complements.containsKey(complement)){
                     return new int[]{complements.get(complement),i};
                 }
