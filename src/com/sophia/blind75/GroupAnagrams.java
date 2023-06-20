@@ -4,7 +4,11 @@ import java.util.*;
 
 public class GroupAnagrams {
 
-    //class Solution {
+    // 1 loop through each string in the input
+// 2 sort the string
+// 3 insert into the hashmap
+// 4 iterate through the hashmap and put each value in our result array
+// 5 return result array
         public List<List<String>> groupAnagrams(String[] strs) {
             List<List<String>> result = new ArrayList<>();
             Map<String,List<String>> map = new HashMap<>();
@@ -39,11 +43,7 @@ public class GroupAnagrams {
     }
 
 
-// 1 loop through each string in the input
-// 2 sort the string
-// 3 insert into the hashmap
-// 4 iterate through the hashmap and put each value in our result array
-// 5 return result array
+
 //   // class Solution {
 //        public List<List<String>> groupAnagrams(String[] strs) {
 //            if(strs == null || strs.length == 0)
