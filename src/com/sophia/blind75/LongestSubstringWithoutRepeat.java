@@ -38,7 +38,7 @@ public class LongestSubstringWithoutRepeat {
                 hm.put(arr[left], hm.get(arr[left]) - 1);
                 left++;
             }
-            maxLen = Math.max(maxLen, right - left + 1);
+            maxLen = Math.max(maxLen, right - left + 1);//right -left + 1 = size of window
             right++;
         }
         return maxLen;
