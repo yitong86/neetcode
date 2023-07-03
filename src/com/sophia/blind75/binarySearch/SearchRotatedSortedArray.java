@@ -4,9 +4,11 @@ public class SearchRotatedSortedArray {
     public int search(int[] nums, int target) {
         int left =0;
         int right =nums.length-1;
-
+//[4,5,6,7,8,0,1,2]
         while(left <= right){
+            //mid => index =3 element=>7
             int mid= left + (right - left)/2;
+            //look for the pivot element
             if(nums[mid]==target){
                 return mid;
             }
@@ -20,8 +22,14 @@ public class SearchRotatedSortedArray {
                     left=mid+1;
                 }
             }
-            else if(nums[left]>nums[mid]){
+            //[7,8,0,1,2,3,4,5,6]
+            //index 4 element 2 = mid
+           // else if(nums[left]>nums[mid]){
+                //7>2 go right side target = 5
+             else{
+                 //if left side is not sorted, right side must be sorted
                 if(nums[mid]<target && nums[right]>=target){
+                    left=mid+1;
                     left=mid+1;
                 }
                 else{
@@ -31,5 +39,4 @@ public class SearchRotatedSortedArray {
         }
         return -1;
     }
-
 }
