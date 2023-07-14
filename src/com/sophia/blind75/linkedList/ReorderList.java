@@ -11,6 +11,7 @@ package com.sophia.blind75.linkedList;
  */
 public class ReorderList {
     public void reorderList(ListNode head) {
+        //linkedlist
         if(head==null||head.next==null) return;
         ListNode slow=head;
         ListNode fast=head;
