@@ -18,7 +18,7 @@ public class RemoveNthNode {
         start.next = head;
         ListNode fast = start;
         ListNode slow = start;
-
+      //  Start traversing until the fast pointer reaches the nth node.
         for(int i = 1; i <= n; ++i)
             fast = fast.next;
 
@@ -29,7 +29,7 @@ public class RemoveNthNode {
         }
 
         slow.next = slow.next.next;
-
+//return hea
         return start.next;
     }
 }
