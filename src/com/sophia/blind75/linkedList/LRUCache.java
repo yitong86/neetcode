@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LRUCache {
-
-        final Node head = new Node();
-        final Node tail = new Node();
-
-        Map<Integer,Node> node_map;
-        int cache_capacity;
+    //double linkedlist
+//capacity = size
+    final Node head = new Node();
+    final Node tail = new Node();
+    Map<Integer,Node> node_map;
+    int cache_capacity;
+    //constructor
     public LRUCache(int capacity) {
         node_map = new HashMap<>();
         this.cache_capacity = capacity;
@@ -33,9 +34,9 @@ public class LRUCache {
     public void put(int key, int value) {
         Node node = node_map.get(key);
         if(node!= null){
+            //remove old node set value and add
             remove(node);
             node.val = value;
-
             add(node);
         }else{
             if(node_map.size() == cache_capacity){
@@ -51,28 +52,32 @@ public class LRUCache {
             add(new_node);
         }
     }
+    //add to node
     public void add(Node node){
-        Node head_next = node.next;
+        Node head_next = head.next;
         node.next = head_next;
         head_next.prev = node;
+        head.next = node;
         node.prev = head;
     }
     public void remove(Node node){
         Node next_node = node.next;
         Node prev_node = node.prev;
-
+//set reference node to prev_node
         next_node.prev = prev_node;
         prev_node.next = next_node;
     }
 
-    public class Node{
+    class Node{
         int key;
         int val;
         Node prev;
         Node next;
+
+
+
     }
 }
-
 /**
  * Your LRUCache object will be instantiated and called as such:
  * LRUCache obj = new LRUCache(capacity);
