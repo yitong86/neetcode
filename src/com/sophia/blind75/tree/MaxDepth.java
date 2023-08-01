@@ -32,7 +32,7 @@ public class MaxDepth {
 
         nodes.add(root);
         int levels = 0;
-
+// deque all the nodes present a particular level and add it to queue
         while (!nodes.isEmpty()) {
 
             levels++;
