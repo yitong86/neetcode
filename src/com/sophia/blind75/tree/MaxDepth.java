@@ -36,6 +36,7 @@ public class MaxDepth {
         while (!nodes.isEmpty()) {
 
             levels++;
+            //maintain a count of nodes at each level
             int size = nodes.size();
             for (int i = 0; i < size; i++) {
                 TreeNode poppedNode = nodes.poll();
