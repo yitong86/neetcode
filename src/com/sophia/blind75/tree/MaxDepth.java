@@ -27,6 +27,8 @@ public class MaxDepth {
 
         if (root == null)
             return 0;
+//recrusive
+        //return 1 + Math.max(maxDepth(root.left),maxDepth(root.right));
 
         Queue<TreeNode> nodes = new LinkedList<>();
 
