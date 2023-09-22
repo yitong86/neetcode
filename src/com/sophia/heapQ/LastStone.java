@@ -2,6 +2,7 @@ package com.sophia.heapQ;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class LastStone {
 
@@ -31,3 +32,17 @@ public class LastStone {
         }
     }
 }
+//class Solution {
+//    public int lastStoneWeight(int[] stones) {
+//
+//        PriorityQueue<Integer> q = new PriorityQueue<>(Collections.reverseOrder());
+//        for(int i = 0; i < stones.length; i++) q.offer(stones[i]);
+//        while(q.size() > 1) {
+//            int a = q.poll();
+//            int b = q.poll();
+//            q.offer(a-b);
+//        }
+//        if(q.isEmpty()) return 0;
+//        else return q.poll();
+//    }
+//}
