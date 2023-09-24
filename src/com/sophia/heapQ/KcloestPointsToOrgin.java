@@ -10,14 +10,14 @@ public class KcloestPointsToOrgin {
 
     Queue<int[]> maxHeap = new PriorityQueue<>((a, b)-> dist(b) - dist(a));
 
-//add each points onto the heap
+        //add each points onto the heap
         for(int[] point : points){
                 maxHeap.add(point);
                 if(maxHeap.size() > k){
                 maxHeap.poll();
                 }
                 }
-                //add each points from heap onto a array
+                //add each points from heap onto an array
                 int[][] res = new int[k][2];
                 int i = 0;
                 while(maxHeap.isEmpty() == false){
