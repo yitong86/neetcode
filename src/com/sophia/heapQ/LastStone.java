@@ -32,6 +32,7 @@ public class LastStone {
         }
     }
 }
+//another method using priorityQueue
 //class Solution {
 //    public int lastStoneWeight(int[] stones) {
 //
