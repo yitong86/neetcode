@@ -54,9 +54,6 @@ import java.util.Set;
 public class DesignTwitter {
 
     public static class Solution1 {
-        /**
-         * reference: https://discuss.leetcode.com/topic/48100/java-oo-design-with-most-efficient-function-getnewsfeed
-         */
         public static class Twitter {
 
             private static int timestamp = 0;
