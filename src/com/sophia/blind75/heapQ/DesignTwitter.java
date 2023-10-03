@@ -1,4 +1,4 @@
-package com.sophia.heapQ;
+package com.sophia.blind75.heapQ;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;

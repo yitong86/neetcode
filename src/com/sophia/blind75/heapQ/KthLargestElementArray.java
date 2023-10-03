@@ -1,4 +1,4 @@
-package com.sophia.heapQ;
+package com.sophia.blind75.heapQ;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
